@@ -1,16 +1,15 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import "./App.css";
 
 import Header from "./components/Header";
-import Login from "./Login/Login";
+import LoginScreen from "./Login/LoginScreen";
 import Vote from "./Vote/Vote";
 
 function App() {
   return (
     <div className="base">
       <Header />
-      <Vote />
+      <LoginScreen />
     </div>
   );
 }

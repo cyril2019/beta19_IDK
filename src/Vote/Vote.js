@@ -1,5 +1,5 @@
 import "./Vote.css";
-import React, { useState } from "react";
+import React from "react";
 import Candidate from "../components/Candidate";
 
 function Vote() {

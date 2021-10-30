@@ -1,12 +1,35 @@
 import "./Login.css";
 import Header from "../components/Header";
+import { ethers } from "ethers";
+import Login from "../artifacts/contracts/Login.sol/Login.json";
 import React, { useState } from "react";
 
-function Login() {
+const contractAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
+
+function LoginScreen() {
   const [adhar, setadhar] = useState(0);
   const [dob, setdob] = useState(0);
-  function login() {
+  async function requestAccount() {
+    await window.ethereum.request({ method: "eth_requestAccounts" });
+  }
+  async function login() {
     console.log("adhar=%s and dob=%s", adhar, dob);
+    await requestAccount();
+    if (typeof window.ethereum !== "undefined") {
+      const provider = new ethers.providers.Web3Provider(window.ethereum);
+      const contract = new ethers.Contract(
+        contractAddress,
+        Login.abi,
+        provider
+      );
+      try {
+        const data = await contract.vote_status(adhar);
+        console.log("data: ", data);
+      } catch (err) {
+        console.log("Error: ", err);
+      }
+      console.log("reached end");
+    }
   }
   return (
     <div>
@@ -42,4 +65,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default LoginScreen;
