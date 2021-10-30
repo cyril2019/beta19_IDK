@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.header {
+  display: flex;
+  width: 100vw;
+  align-content: center;
+  background-color: orange;
+  width: 100vw;
+  height: 70px;
+}
+.header-logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: aliceblue;
+  font-weight: bold;
+  font-size: 20px;
+}
+.login-button {
+  background-color: white;
+  border-style: none;
+  border-radius: 10px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px;
+}
+.login-button:hover {
+  background-color: tomato;
+  color: white;
+  border-style: none;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.voting-panel {
+  text-align: center;
+  color: white;
+  width: 50vw;
+  max-height: 60vh;
+  margin: auto;
+  background-color: orange;
+  border-radius: 30px;
+  padding: 40px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cand-list {
+  margin: 20px;
+  overflow: scroll;
+}
+.cand-list::-webkit-scrollbar {
+  display: none;
+}
+
+.btn-vote {
+  background-color: white;
+  border-style: none;
+  border-radius: 20px;
+  padding: 10px;
+}
+.btn-vote:hover {
+  background-color: tomato;
+  color: white;
+  border-style: none;
+  border-radius: 20px;
+  padding: 10px;
+}

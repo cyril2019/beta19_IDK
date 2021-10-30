@@ -1,27 +1,30 @@
+import React from "react";
+import ReactDOM from "react-dom";
 import "./App.css";
+import Candidate from "./components/Candidate";
 
-
-
-
-function App() 
-{
-  const [myCar, setMyCar] = useState("candidate1");
-
-  const handleChange = (event) => {
-    setMyCar(event.target.value)
-}
-
-  return 
-  (
-    <>
-    <form>
-      <select value={selected_candidate} onChange={handleChange}>
-        <option value="candidate1">candidate1</option>
-        <option value="candidate2" selected>candidate2</option>
-        <option value="candidate3">candidate3</option>
-      </select>
-    </form>
-    </>
+function App() {
+  return (
+    <div className="base">
+      <div className="header">
+        <div className="header-logo">E-Voter</div>
+        <button className="login-button">Login</button>
+      </div>
+      <div className="main">
+        <div className="voting-panel">
+          <p>Cast your vote.</p>
+          <div className="cand-list">
+            <Candidate />
+            <Candidate />
+            <Candidate />
+            <Candidate />
+            <Candidate />
+            <Candidate />
+          </div>
+          <button className="btn-vote">Vote</button>
+        </div>
+      </div>
+    </div>
   );
 }
 
