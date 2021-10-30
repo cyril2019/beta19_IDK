@@ -1,5 +1,7 @@
 import "./App.css";
 
+function clickMe() {}
+
 function App() {
   return (
     <>
