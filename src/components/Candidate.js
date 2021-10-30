@@ -10,7 +10,7 @@ function Candidate() {
         <p>Gender:</p>
       </div>
       <div className="cand-selector">
-        <input type="radio"></input>
+        <button className="Vote">Vote</button>
       </div>
     </div>
   );
