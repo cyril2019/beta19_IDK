@@ -1,7 +1,23 @@
 import "./App.css";
 
 function App() {
-  return <div className="App"></div>;
+  return (
+    <>
+      <div>
+        <button onClick={clickMe}>Button1</button>
+      </div>
+
+      <div>
+        <button onClick={clickMe}>Button2</button>
+      </div>
+      <div>
+        <button onClick={clickMe}>Button3</button>
+      </div>
+      <div>
+        <button onClick={clickMe}>Button4</button>
+      </div>
+    </>
+  );
 }
 
 export default App;
