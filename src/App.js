@@ -2,14 +2,12 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./App.css";
 import Candidate from "./components/Candidate";
+import Header from "./components/Header";
 
 function App() {
   return (
     <div className="base">
-      <div className="header">
-        <div className="header-logo">E-Voter</div>
-        <button className="login-button">Login</button>
-      </div>
+      <Header />
       <div className="main">
         <div className="voting-panel">
           <p>Cast your vote.</p>
