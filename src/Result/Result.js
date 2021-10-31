@@ -12,7 +12,7 @@ function Result(props) {
       <div className="cand-list">
         <div className="main">
           <div className="voting-panel">
-            <p>Results.</p>
+            <p>Results</p>
             <div className="cand-list">
               <CandidateResult
                 name="Cyril"

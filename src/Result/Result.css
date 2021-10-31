@@ -1,3 +1,11 @@
 .back-to-home {
   cursor: pointer;
 }
+
+.back-to-home:hover {
+  color: tomato;
+}
+
+.voting-panel p {
+  height: 20px;
+}
