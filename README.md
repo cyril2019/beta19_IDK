@@ -13,7 +13,8 @@ npx hardhat node
 node scripts/sample-script.js
 npx hardhat help
 ```
-
+Deployed at:
+https://blockvoter.vercel.app/
 
 Video Demo:https://drive.google.com/file/d/1DzQ_On6CKTKvvQHa2Aiw5GTSK2vN9gtZ/view?usp=sharing
 
