@@ -3,6 +3,7 @@
   padding: 0;
 }
 .header {
+  position: relative;
   display: flex;
   width: 100vw;
   align-content: center;
@@ -18,21 +19,8 @@
   font-weight: bold;
   font-size: 20px;
 }
-.login-button {
-  background-color: white;
-  border-style: none;
-  border-radius: 10px;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  padding: 10px;
-}
-.login-button:hover {
-  background-color: tomato;
-  color: white;
-  border-style: none;
-  border-radius: 20px;
-  padding: 10px;
+.loading {
+  text-align: center;
 }
 
 .voting-panel {

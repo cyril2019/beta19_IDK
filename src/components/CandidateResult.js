@@ -3,7 +3,7 @@ import { ethers } from "ethers";
 import Login from "../artifacts/contracts/Login.sol/Login.json";
 function CandidateResult(props) {
   const [votes, setVotes] = useState(0);
-  const contractAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
+  const contractAddress = "0xF31905F42A8C8307166a0Ea328C1bf08Ec957791";
 
   async function requestAccount() {
     await window.ethereum.request({ method: "eth_requestAccounts" });
@@ -33,7 +33,9 @@ function CandidateResult(props) {
       <div className="cand-detail">
         <p>Name:{props.name}</p>
         <p>Votes:{votes}</p>
-        <button onClick={getResult}>Refresh Votes</button>
+        <button className="result-refresh-btn" onClick={getResult}>
+          Refresh
+        </button>
       </div>
     </div>
   );

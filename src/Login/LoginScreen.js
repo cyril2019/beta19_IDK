@@ -4,7 +4,7 @@ import { ethers } from "ethers";
 import Login from "../artifacts/contracts/Login.sol/Login.json";
 import React, { useState } from "react";
 
-const contractAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
+const contractAddress = "0xF31905F42A8C8307166a0Ea328C1bf08Ec957791";
 
 function LoginScreen(props) {
   const [adhar, setadhar] = useState(0);
@@ -15,7 +15,8 @@ function LoginScreen(props) {
   }
 
   function validate() {
-    if (adhar == "") setErr("Voter Id cannot be Null");
+    if (adhar.length != 14) setErr("Voter Id format incorrect");
+    else login();
   }
 
   async function login() {
@@ -69,7 +70,7 @@ function LoginScreen(props) {
               />
             </div>
             <div className="login-btn">
-              <button type="submit" onClick={login}>
+              <button type="submit" onClick={validate}>
                 LOGIN
               </button>
             </div>

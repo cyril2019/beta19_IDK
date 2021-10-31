@@ -14,19 +14,37 @@ function App() {
   const [isLoggedin, setLogin] = useState(false);
   const [isAdmin, setAdmin] = useState(false);
   const [adhar, setadhar] = useState(0);
+  const [loading, setLoading] = useState(false);
   return (
-    <div className="base">
+    <div>
+      {loading ? (
+        <div className="loading">
+          <p>Casting your VOTE</p>
+        </div>
+      ) : (
+        <></>
+      )}
       <Header />
       {isAdmin ? (
-        <Result />
+        <Result
+          setLogin={setLogin}
+          setAdmin={setAdmin}
+          setLoading={setLoading}
+        />
       ) : !isLoggedin ? (
         <LoginScreen
           setLogin={setLogin}
           setadhar={setadhar}
           setAdmin={setAdmin}
+          setLoading={setLoading}
         />
       ) : (
-        <Vote adhar={adhar} setLogin={setLogin} />
+        <Vote
+          adhar={adhar}
+          setLogin={setLogin}
+          setAdmin={setAdmin}
+          setLoading={setLoading}
+        />
       )}
     </div>
   );

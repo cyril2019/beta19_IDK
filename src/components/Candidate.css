@@ -23,3 +23,35 @@
   margin: auto;
   width: 50px;
 }
+
+.result-refresh-btn {
+  background-color: white;
+  border-style: none;
+  margin-top: 3px;
+  border-radius: 10px;
+  padding: 10px;
+}
+.result-refresh-btn:hover {
+  background-color: tomato;
+  color: white;
+  border-style: none;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: white;
+}
+.vote {
+  background-color: white;
+  border-style: none;
+  margin-top: 3px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.vote:hover {
+  background-color: tomato;
+  color: white;
+  border-style: none;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: white;
+}
