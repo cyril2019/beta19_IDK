@@ -7,6 +7,7 @@ contract Login {
     string private admin_adhar;
     string private admin_dob;
     mapping(string=>bool) hasVoted;
+    mapping(string=>uint) result;
 
     constructor(){
        admin_adhar= "0000 0000 0000";
@@ -16,8 +17,16 @@ contract Login {
         return hasVoted[_adhar];
     }
 
-    function vote(string memory _adhar) public{
-            console.log("Adhar no %s voted",_adhar);
-            hasVoted[_adhar]=true;
+    function getAdmin() public view returns(string memory){
+        return admin_adhar;
+    }
+
+    function vote(string memory _voter,string memory _candidate) public{
+            hasVoted[_voter]=true;
+            result[_candidate]+=1;
+    }
+
+     function getResult(string memory _candidate) public view returns(uint){
+        return result[_candidate];
     }
 }

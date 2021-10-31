@@ -6,14 +6,19 @@ import React, { useState } from "react";
 
 const contractAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
 
-function LoginScreen() {
+function LoginScreen(props) {
   const [adhar, setadhar] = useState(0);
   const [dob, setdob] = useState(0);
+  const [err, setErr] = useState("");
   async function requestAccount() {
     await window.ethereum.request({ method: "eth_requestAccounts" });
   }
+
+  function validate() {
+    if (adhar == "") setErr("Voter Id cannot be Null");
+  }
+
   async function login() {
-    console.log("adhar=%s and dob=%s", adhar, dob);
     await requestAccount();
     if (typeof window.ethereum !== "undefined") {
       const provider = new ethers.providers.Web3Provider(window.ethereum);
@@ -24,7 +29,17 @@ function LoginScreen() {
       );
       try {
         const data = await contract.vote_status(adhar);
-        console.log("data: ", data);
+        const isAdmin = await contract.getAdmin();
+        if (isAdmin == adhar) {
+          props.setAdmin(true);
+        } else {
+          if (data == false) {
+            props.setLogin(true);
+            props.setadhar(adhar);
+          }
+        }
+
+        console.log(data);
       } catch (err) {
         console.log("Error: ", err);
       }
@@ -36,9 +51,9 @@ function LoginScreen() {
       <div className="login-main">
         <div className="main-header">Login</div>
         <div className="main-form">
-          <form>
+          <div>
             <div className="form-field">
-              <p>ADHAR No:</p>
+              <p>Voter Id:</p>
               <input
                 type="text"
                 placeholder="     0000 0000 0000"
@@ -58,7 +73,10 @@ function LoginScreen() {
                 LOGIN
               </button>
             </div>
-          </form>
+            <div>
+              <p>{err}</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

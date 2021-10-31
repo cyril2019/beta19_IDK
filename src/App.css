@@ -70,3 +70,69 @@
   border-radius: 20px;
   padding: 10px;
 }
+
+.login-main {
+  background-color: orange;
+  width: 50vw;
+  margin: auto;
+  padding: 20px;
+  color: white;
+  margin-top: 60px;
+  border-radius: 30px;
+}
+
+.main-header {
+  text-align: center;
+  font-size: xx-large;
+  font-weight: bolder;
+}
+
+.main-form {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding: 30px;
+}
+
+.form-field {
+  position: relative;
+  display: flex;
+  padding: 10px;
+  width: 100%;
+}
+
+.form-field p {
+  margin-right: 10px;
+}
+
+.form-field input {
+  height: 30px;
+  width: 200px;
+  border-style: none;
+  border-radius: 20px;
+  position: absolute;
+  right: 0;
+  align-self: flex-start;
+  text-align: center;
+  display: flex;
+}
+.login-btn {
+  padding-top: 20px;
+  width: max-content;
+  margin: auto;
+}
+.login-btn button {
+  width: max-content;
+  margin: auto;
+  padding: 10px;
+  background-color: white;
+  border-radius: 10px;
+  border-style: none;
+}
+.login-btn button:hover {
+  width: max-content;
+  margin: auto;
+  padding: 10px;
+  color: white;
+  background-color: tomato;
+}
