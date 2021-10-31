@@ -1,7 +1,7 @@
 import "./Login.css";
 import Header from "../components/Header";
 import { ethers } from "ethers";
-import Login from "../artifacts/contracts/Login.sol/Login.json";
+import Login from "../Login.json";
 import React, { useState } from "react";
 
 const contractAddress = "0xF31905F42A8C8307166a0Ea328C1bf08Ec957791";
