@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { ethers } from "ethers";
-import Login from "../artifacts/contracts/Login.sol/Login.json";
+import Login from "../Login.json";
 function CandidateResult(props) {
   const [votes, setVotes] = useState(0);
   const contractAddress = "0xF31905F42A8C8307166a0Ea328C1bf08Ec957791";
@@ -34,7 +34,7 @@ function CandidateResult(props) {
         <p>Name:{props.name}</p>
         <p>Votes:{votes}</p>
         <button className="result-refresh-btn" onClick={getResult}>
-          Refresh
+          Count
         </button>
       </div>
     </div>

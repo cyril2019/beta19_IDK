@@ -2,7 +2,7 @@ import "./Vote.css";
 import React, { useState } from "react";
 import { ethers } from "ethers";
 import Candidate from "../components/Candidate";
-import Login from "../artifacts/contracts/Login.sol/Login.json";
+import Login from "../Login.json";
 
 const contractAddress = "0xF31905F42A8C8307166a0Ea328C1bf08Ec957791";
 

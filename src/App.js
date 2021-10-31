@@ -1,6 +1,5 @@
 import "./App.css";
 import { ethers } from "ethers";
-import Login from "./artifacts/contracts/Login.sol/Login.json";
 import React, { useState } from "react";
 import Header from "./components/Header";
 import Candidate from "./components/Candidate";
